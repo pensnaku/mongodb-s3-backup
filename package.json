@@ -1,0 +1,16 @@
+{
+  "name": "mongodb-s3-migration",
+  "version": "1.0.0",
+  "description": "Migrate MongoDB database to s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Eedee Naku",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.825.0",
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.3"
+  }
+}
