@@ -12,4 +12,4 @@ Streams the data directly to s3 as opposed to writing to disk first. This ensure
   - Provide all necessary environment variables
   - run `npm install`
   - Set index.copyData() as entry point for lambda function
-  - Trigger function and your specified db should be backed up in s3 in this format <<database_name>>/<<collection_name>>.dmp
+  - Trigger function and your specified db should be backed up in s3 in this format `<bucket_name>/<database_name>/<collection_name>.dmp`
