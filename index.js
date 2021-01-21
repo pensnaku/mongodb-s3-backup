@@ -23,7 +23,7 @@ let convertToJSON = (data) => {
   return JSON.stringify(data) + '\n';
 };
 
-let uploadDataToS3 = (Key) => {
+const uploadDataToS3 = (Key) => {
   let pass = new stream.PassThrough();
   const params = {
     ACL: 'public-read',
@@ -43,7 +43,7 @@ let uploadDataToS3 = (Key) => {
   return pass;
 };
 
-copyData = (event, context, callback) => {
+const copyData = (event, context, callback) => {
   console.log('Connecting to the database');
   MongoClient.connect(getDBURI(), {
     useNewUrlParser: true,
@@ -73,4 +73,8 @@ copyData = (event, context, callback) => {
       }
     });
   });
+};
+
+module.exports = {
+  copyData,
 };
